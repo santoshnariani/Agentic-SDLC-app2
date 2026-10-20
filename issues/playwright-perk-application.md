@@ -4,7 +4,7 @@
 As a QA engineer I want to verify the Perk Application Platform journey end to end
 
 ## Assignment Order
-Step 8 of 8 — assign after: [FRONTEND] Redemption Export is merged
+Step 10 of 10 — assign after: [FRONTEND] Redemption Export is merged
 Tier: PLAYWRIGHT — assign this last, after all FRONTEND Issues are merged
 
 ## Primary Journey — Offer Management
@@ -20,13 +20,15 @@ One action per step with expected result:
 ## Extension Journey — Redemption Export
 > Only run if [FRONTEND] Redemption Export is implemented and merged.
 
-1. Click the "Redemptions" link in the Navbar — expect navigation to the Redemptions page
+1. Click `nav-redemptions` — expect navigation to the Redemptions page (/redemptions)
 2. Expect `redemption-list` to be visible and at least one `redemption-item` row to be present (seeded Redemptions)
 3. Click `export-csv-button` — expect a file download to be triggered
 
 ## Test Credentials
 - Email:    test@example.com
 - Password: password123
+
+test@example.com is seeded with the ADMIN role by [DATABASE] Admin Access, so it can reach the Admin-only Offer and Redemption pages.
 
 ## data-testid Reference
 These must match the data-testid values in the FRONTEND issues exactly:
@@ -46,10 +48,11 @@ These must match the data-testid values in the FRONTEND issues exactly:
 - `redemption-list` — assert visible on the Redemptions page
 - `redemption-item` — assert at least one row present in `redemption-list`
 - `export-csv-button` — click to trigger CSV file download
+- `nav-redemptions` — click to navigate to the Redemptions page
 
 ## Acceptance Criteria
 - [ ] Full offer management journey passes without errors: login → view list → create offer → offer appears in list → toggle status → badge updates
-- [ ] Status badge reflects "INACTIVE" after toggle — assert toBeDisabled() is not used; assert text content change
+- [ ] `offer-status-badge` text changes from "ACTIVE" to "INACTIVE" after the toggle (assert the new text — the button is not disabled or removed)
 - [ ] All selectors use data-testid only — no CSS classes or text content selectors
 - [ ] Redemptions page shows seeded records and clicking export-csv-button triggers a file download
 
@@ -58,3 +61,4 @@ These must match the data-testid values in the FRONTEND issues exactly:
 - FR-002: E2E toggles Offer status and asserts the status badge updates
 - FR-007: E2E navigates to Redemptions page and triggers CSV download via export-csv-button
 
+- FR-009: E2E runs as the seeded Admin and reaches the Admin-only Offer and Redemption pages

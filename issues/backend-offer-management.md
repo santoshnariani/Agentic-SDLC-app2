@@ -4,7 +4,7 @@
 As an Admin I want to create, list, and update Offers via the API so that I can configure Perk discounts for Members
 
 ## Assignment Order
-Step 3 of 8 — assign after: [DATABASE] Perk Application is merged
+Step 4 of 10 — assign after: [DATABASE] Admin Access is merged
 Tier: BACKEND — primary slice
 
 ## Context
@@ -40,4 +40,4 @@ This issue adds only the Offer endpoints required for this slice.
 ## FR Coverage
 - FR-001: POST /api/offers creates an Offer with all required fields; rejects missing fields with 400
 - FR-002: GET /api/offers lists all Offers; PATCH /api/offers/:id updates status
-- FR-009: All Admin endpoints require valid JWT; unauthenticated requests return 401
+- FR-009 (partial): All Offer endpoints require a valid JWT (401); the Admin-role 403 check is added by [BACKEND] Admin Access

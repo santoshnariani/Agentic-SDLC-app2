@@ -4,7 +4,7 @@
 As an Admin I want to view, create, and toggle the status of Offers in the UI so that I can configure Perk discounts without using the API directly
 
 ## Assignment Order
-Step 6 of 8 — assign after: [BACKEND] Redemption Export is merged
+Step 8 of 10 — assign after: [BACKEND] Admin Access is merged
 Tier: FRONTEND — primary slice
 
 ## Context

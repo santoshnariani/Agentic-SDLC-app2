@@ -4,7 +4,7 @@
 As an Admin I want to view Redemption records and download them as a CSV file so that I can reconcile Perk discounts with sponsors
 
 ## Assignment Order
-Step 7 of 8 — assign after: [FRONTEND] Offer Management is merged
+Step 9 of 10 — assign after: [FRONTEND] Offer Management is merged
 Tier: FRONTEND — extension slice
 
 ## Context
@@ -20,13 +20,14 @@ API endpoints available:
 - RedemptionList — table that fetches and displays all Redemption records with columns: offer_id, transaction_id, merchant_id, timestamp, skus, quantity, gross_amount, discount_amount, member_token
 - ExportCSVButton — button that triggers GET /api/redemptions/export and initiates a file download of the returned CSV
 
-Add a "Redemptions" navigation link to Navbar.tsx pointing to the Redemptions page (route: /redemptions).
+- Navbar link — add a "Redemptions" item to Navbar.tsx that navigates to the Redemptions page (route: /redemptions)
 
 ## data-testid Values
 Every interactive and key display element must have a data-testid:
 - `redemption-list` — on the Redemption list table or container element
 - `redemption-item` — on each Redemption row
 - `export-csv-button` — on the Export CSV button
+- `nav-redemptions` — on the "Redemptions" link in Navbar.tsx
 
 ## Acceptance Criteria
 - [ ] RedemptionList renders seeded Redemption records with all required columns visible

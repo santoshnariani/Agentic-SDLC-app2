@@ -4,7 +4,7 @@
 As a system I need an Offer model so that Admins can configure Perks with status, date range, merchant match, SKU list, and discount amount
 
 ## Assignment Order
-Step 1 of 8 — assign after: nothing (assign this first)
+Step 1 of 10 — assign after: nothing (assign this first)
 Tier: DATABASE — primary slice
 
 ## Context
