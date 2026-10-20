@@ -4,7 +4,7 @@
 As a system I need a Redemption model so that every successful Perk application is recorded with full audit detail for sponsor reconciliation
 
 ## Assignment Order
-Step 2 of 8 — assign after: [DATABASE] Offer Management is merged
+Step 2 of 10 — assign after: [DATABASE] Offer Management is merged
 Tier: DATABASE — extension slice
 
 ## Context

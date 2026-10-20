@@ -4,7 +4,7 @@
 As a Member I want to submit a transaction so that the system evaluates Active Offers, applies any matching Perk discount, and returns the result including Perk outcome
 
 ## Assignment Order
-Step 4 of 8 — assign after: [BACKEND] Offer Management is merged
+Step 5 of 10 — assign after: [BACKEND] Offer Management is merged
 Tier: BACKEND — extension slice
 
 ## Context

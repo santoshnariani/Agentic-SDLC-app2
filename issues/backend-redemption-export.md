@@ -4,7 +4,7 @@
 As an Admin I want to query and export Redemption records via the API so that I can reconcile Perk discounts with sponsors
 
 ## Assignment Order
-Step 5 of 8 — assign after: [BACKEND] Perk Application is merged
+Step 6 of 10 — assign after: [BACKEND] Perk Application is merged
 Tier: BACKEND — extension slice
 
 ## Context
@@ -30,9 +30,9 @@ Note: Register /api/redemptions/export BEFORE any /api/redemptions/:id route in 
 ## Acceptance Criteria
 - [ ] GET /api/redemptions returns 200 with an array of all Redemption records including seeded records
 - [ ] GET /api/redemptions/export returns a valid CSV file with the correct column headers and one data row per Redemption record
-- [ ] Both endpoints return 401 without a valid Admin JWT
+- [ ] Both endpoints return 401 without a valid JWT (Admin-role 403 enforcement is added by [BACKEND] Admin Access)
 - [ ] Neither endpoint allows deletion or modification of Redemption records (read-only)
 
 ## FR Coverage
 - FR-007: GET /api/redemptions/export returns CSV with all required columns; GET /api/redemptions returns queryable records
-- FR-009: Both Admin endpoints require valid JWT; unauthenticated requests return 401
+- FR-009 (partial): Both endpoints require a valid JWT (401); the Admin-role 403 check is added by [BACKEND] Admin Access
